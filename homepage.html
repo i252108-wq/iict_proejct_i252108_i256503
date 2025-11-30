@@ -14,7 +14,7 @@
 
         body {
             background: #000;
-            color: #faf3f3;
+            color: #f1ebeb;
         }
 
         header {
@@ -97,10 +97,10 @@
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
             border-radius: 5px;
-            background: #333;
+            background: #3f3e3e;
         }
 
         .card h2 {
@@ -118,6 +118,30 @@
             text-align: center;
             opacity: 0.7;
             font-size: 14px;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Text on top of the image */
+        .overlay-text {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 15px;
+            border-radius: 6px;
         }
     </style>
 </head>
@@ -150,47 +174,55 @@
     <section id="clothing">
         <h1>CLOTHING</h1>
         <p>Discover robes, scarves, and styles fit for every house.</p>
-        <div class="grid">
 
-            <img src="clothing.jpeg" alt="Clothing" />
-            <h2>House Apparel</h2>
-            <p>Robes, scarves, ties and more.</p>
-            <a href="#" class="btn">SHOP NOW</a>
-        </div>
-        </div>
-    </section>
-
-    <section id="books">
-        <h1>BOOKS</h1>
-        <p>Read your way through the Wizarding World.</p>
         <div class="grid">
-            <img src="booksjpeg.jpeg" alt="Books" />
-            <h2>Magical Books</h2>
-            <p>Explore classic and new releases.</p>
-            <a href="#" class="btn">SHOP NOW</a>
-        </div>
-        </div>
-    </section>
-
-    <section id="collectibles">
-        <h1>COLLECTIBLES</h1>
-        <p>Collect a piece of magic. Discover rare artifacts.</p>
-        <div class="grid">
-            <img src="collectibles.jpeg" alt="Collectibles" />
-            <centre></centre>
-            <h2>Rare Collectibles</h2>
-            <div style="text-align: center; margin-top: 10px;">
-                <a href="#" class="btn">SHOP NOW!</a>
-                <p>Perfect for true witches and wizards.</p>
+            <div class="card">
+                <div class="image-box">
+                    <img src="clothing.jpeg" alt="Clothing" />
+                    <div class="overlay-text">Robes • Scarves • Ties</div>
+                </div>
+                <p>Robes, scarves, ties and more.</p>
                 <a href="#" class="btn">SHOP NOW</a>
             </div>
         </div>
     </section>
+    <sec id="books">
+        <h1>BOOKS</h1>
+        <p>Read your way through the Wizarding World.</p>
 
-    <footer>
-        © 2025 Magic Menageries — All Rights Reserved
-        disclaimer: This is a website uses ai based images
-    </footer>
+        <div class="grid">
+            <div class="card">
+                <div class="image-box">
+                    <img src="booksjpeg.jpeg" alt="Books" />
+                    <div class="overlay-text">Magical Books</div>
+                </div>
+                <p>Explore classic and new releases.</p>
+                <a href="#" class="btn">SHOP NOW</a>
+            </div>
+        </div>
+        </section>
+
+        <section id="collectibles">
+            <h1>COLLECTIBLES</h1>
+            <p>Collect a piece of magic. Discover rare artifacts.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="image-box">
+                        <img src="collectibles.jpeg" alt="Collectibles" />
+                        <div class="overlay-text">Rare Collectibles</div>
+                    </div>
+
+                    <p>Perfect for true witches and wizards.</p>
+
+                    <a href="#" class="btn">SHOP NOW</a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            © 2025 Magic Menageries — All Rights Reserved
+            disclaimer: This is a website uses ai based images
+        </footer>
 
 </body>
 

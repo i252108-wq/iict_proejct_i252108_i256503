@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>House Sorting Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcf6f6;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #2b2929;
+        }
+
+        .quiz-container {
+            background-color: #cfc6c6;
+            padding: 20px 40px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #212221;
+            color: rgb(58, 56, 56);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body><a image src="bg.jpeg"></a>
+    <div class="quiz-container">
+        <h1>Which House Do You Belong To?</h1>
+        <a href="homepage.html">Back to Home</a>
+        <a image src="home icon.jpeg"></a>
+        <div id="quiz">
+            <a image src="quiz image.jpeg"></a>
+            <p>1. Do you enjoy adventures and challenges?</p>
+            <input type="radio" name="q1" value="Gryffindor"> Yes<br>
+            <input type="radio" name="q1" value="Hufflepuff"> Sometimes<br>
+            <input type="radio" name="q1" value="Ravenclaw"> Rarely<br>
+            <input type="radio" name="q1" value="Slytherin"> Never<br><br>
+
+            <p>2. Are you ambitious and goal-oriented?</p>
+            <input type="radio" name="q2" value="Gryffindor"> Sometimes<br>
+            <input type="radio" name="q2" value="Slytherin"> Yes<br>
+            <input type="radio" name="q2" value="Hufflepuff"> Rarely<br>
+            <input type="radio" name="q2" value="Ravenclaw"> Sometimes<br><br>
+
+            <p>3. Do you enjoy learning and solving puzzles?</p>
+            <input type="radio" name="q3" value="Ravenclaw"> Yes<br>
+            <input type="radio" name="q3" value="Gryffindor"> Sometimes<br>
+            <input type="radio" name="q3" value="Hufflepuff"> Sometimes<br>
+            <input type="radio" name="q3" value="Slytherin"> Rarely<br><br>
+
+            <button onclick="calculateResult()">Submit</button>
+        </div>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateResult() {
+            const answers = [];
+            const totalQuestions = 3;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) {
+                    answers.push(selected.value);
+                } else {
+                    alert("Please answer all questions!");
+                    return;
+                }
+            }
+
+            // Count occurrences of each house
+            const houseCounts = {};
+            answers.forEach(house => {
+                houseCounts[house] = (houseCounts[house] || 0) + 1;
+            });
+
+            // Find house with max count
+            let maxHouse = answers[0];
+            let maxCount = 0;
+            for (const house in houseCounts) {
+                if (houseCounts[house] > maxCount) {
+                    maxCount = houseCounts[house];
+                    maxHouse = house;
+                }
+            }
+
+            document.getElementById('result').innerText = `You belong to: ${maxHouse}!`;
+        }
+    </script>
+
+</body>
+
+</html>
