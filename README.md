@@ -1,3 +1,1 @@
-# iict_proejct_i
-
-# 252
+# IICT Proejct i252108 i256503
