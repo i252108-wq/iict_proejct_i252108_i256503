@@ -8,14 +8,14 @@
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 70;
+            padding: 70;
             box-sizing: border-box;
         }
 
         body {
             font-family: 'Cinzel', serif;
-            background: url('https://images.unsplash.com/photo-1526401485004-2aa7be9e2f5b') center/cover no-repeat;
+            background: url(bg.jpeg) center/cover no-repeat;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -39,7 +39,7 @@
             background-size: cover;
             background-position: center;
             position: relative;
-            border: 4px solid #fff;
+            border: 4px solid #070606;
             border-radius: 5px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -47,7 +47,7 @@
 
         .banner:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 20px rgba(54, 53, 53, 0.7);
         }
 
         /* Dark overlay */
@@ -75,12 +75,8 @@
 
         /* Crest image */
         .banner img {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 110px;
-            z-index: 2;
+            width: 100%;
+            height: 100%;
         }
 
         /* Quiz Button */
@@ -89,7 +85,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: linear-gradient(to right, #fff, #cfe7ff);
+            background: linear-gradient(to right, #413f3f, #535455);
             padding: 18px 40px;
             font-size: 22px;
             border-radius: 12px;
@@ -110,45 +106,41 @@
     </style>
 </head>
 
-<body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Gryffindor -->
-        <div class="banner"
-            style="background-image:url('https://i.pinimg.com/originals/76/52/fb/7652fbc9f220ad8d182d4c8768e7fe96.jpg');">
-            <h2>Gryffindor</h2>
-            <img src="https://i.pinimg.com/originals/64/3d/19/643d1992e02328d6f1a8206dfa818572.png">
-        </div>
-
-        <!-- Ravenclaw -->
-        <div class="banner"
-            style="background-image:url('https://i.pinimg.com/originals/c4/07/f8/c407f809fc712fc51186f06f1f3f18c2.jpg');">
-            <h2>Ravenclaw</h2>
-            <img src="https://i.pinimg.com/originals/c0/07/91/c007919418eb2e80e3efa2df78a0564c.png">
-        </div>
-
-        <!-- Slytherin -->
-        <div class="banner"
-            style="background-image:url('https://i.pinimg.com/originals/ed/1f/9d/ed1f9dd541f6274957332f7286213b04.jpg');">
-            <h2>Slytherin</h2>
-            <img src="https://i.pinimg.com/originals/b7/49/8e/b7498e52282f4ecf5df76e8864c8adab.png">
-        </div>
-
-        <!-- Hufflepuff -->
-        <div class="banner"
-            style="background-image:url('https://i.pinimg.com/originals/82/a5/09/82a509d5782906deec217d96e8c67d56.jpg');">
-            <h2>Hufflepuff</h2>
-            <img src="https://i.pinimg.com/originals/0c/ba/85/0cba8512c17df0ee06b6ade24b3316d7.png">
-        </div>
-
-        <!-- Quiz Button -->
-        <a class="quiz-btn" href="#">
-            TAKE SORTING QUIZ!
-        </a>
-
+    <!-- Ravenclaw -->
+    <div class="banner"
+        style="background-image:url('https://i.pinimg.com/originals/c4/07/f8/c407f809fc712fc51186f06f1f3f18c2.jpg');">
+        <h2>Ravenclaw</h2>
+        <img src="ravennnn.jpeg">
     </div>
 
-</body>
+    <!-- Gryffindor -->
+    <div class="banner"
+        style="background-image:url('f:\Ayesha Workspace\WhatsApp Image 2025-11-30 at 7.29.50 PM.jpeg');">
+        <h2>Gryffindor</h2>
+        <img src="gryffindorpeg.jpeg">
+
+    </div>
+    <!-- Slytherin -->
+    <div class="banner"
+        style="background-image: url('https://i.pinimg.com/originals/1c/7b/1e/1c7b1e2f3f5f4f0e4f4e4e4e4e4e4e4e.jpg');">
+        <h2>Slytherin</h2>
+        <img src="sly.jpeg">
+    </div>
+
+    <!-- Hufflepuff -->
+    <div class="banner"
+        style="background-image:url('https://i.pinimg.com/originals/82/a5/09/82a509d5782906deec217d96e8c67d56.jpg');">
+        <h2>Hufflepuff</h2>
+        <img src="huffle.jpeg">
+    </div>
+
+    <!-- Quiz Button -->
+    <a class="quiz-btn" href="quizzz.html">
+        TAKE SORTING QUIZ!
+
+        </body>
 
 </html>
