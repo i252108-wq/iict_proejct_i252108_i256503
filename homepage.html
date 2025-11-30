@@ -1,55 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAGIC MENAGERIES</title>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" / <title>Magic Menageries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        body {
+            background: #000;
+            color: #faf3f3;
+        }
 
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: #111;
-        color: white;
-    }
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(6px);
+        }
 
-    nav {
-        width: 100%;
-        padding: 15px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(59, 58, 58, 0.6);
-        position: fixed;
-        top: 0;
-        z-index: 999;
-    }
+        header .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
 
-    nav .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
 
-    nav .logo img {
-        width: 45px;
-        height: 45px;
-        object-fit: contain;
-    }
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-    nav .logo span {
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 25px;
-    }
+        .hero p {
+            max-width: 600px;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 80px 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            background: #333;
+        }
+
+        .card h2 {
+            margin: 15px 0 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MAGIC MENAGERIES</div>
+        <a href="#">Wishlist</a>
+        <a href="#">Cart</a>
+        <a href="login page.html">Account</a>
+        <a href="#">Contact</a>
+        <a href="about us page.html">About Us</a>
+        <a href="#">Shop</a>
+        </nav>
+        </nav>
+    </header>
+
+    <!-- HERO BACKGROUND: user will add custom image -->
+    <div class="hero" style="background-image: url('bg.jpeg');">
+        <h1>MAGIC MENAGERIES</h1>
+        <p>Step into a world of magic made just for fans. Discover books, merch, and collectibles inspired by your
+            favorite house.</p>
+        <a href="#" class="btn">EXPLORE NOW</a>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="#" class="btn">SHOP NOW!</a>
+    </div>
+
+    <section id="clothing">
+        <h1>CLOTHING</h1>
+        <p>Discover robes, scarves, and styles fit for every house.</p>
+        <div class="grid">
+
+            <img src="clothing.jpeg" alt="Clothing" />
+            <h2>House Apparel</h2>
+            <p>Robes, scarves, ties and more.</p>
+            <a href="#" class="btn">SHOP NOW</a>
+        </div>
+        </div>
+    </section>
+
+    <section id="books">
+        <h1>BOOKS</h1>
+        <p>Read your way through the Wizarding World.</p>
+        <div class="grid">
+            <img src="booksjpeg.jpeg" alt="Books" />
+            <h2>Magical Books</h2>
+            <p>Explore classic and new releases.</p>
+            <a href="#" class="btn">SHOP NOW</a>
+        </div>
+        </div>
+    </section>
+
+    <section id="collectibles">
+        <h1>COLLECTIBLES</h1>
+        <p>Collect a piece of magic. Discover rare artifacts.</p>
+        <div class="grid">
+            <img src="collectibles.jpeg" alt="Collectibles" />
+            <centre></centre>
+            <h2>Rare Collectibles</h2>
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="#" class="btn">SHOP NOW!</a>
+                <p>Perfect for true witches and wizards.</p>
+                <a href="#" class="btn">SHOP NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Magic Menageries — All Rights Reserved
+        disclaimer: This is a website uses ai based images
+    </footer>
+
+</body>
+
+</html>
