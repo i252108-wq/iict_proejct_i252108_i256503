@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail | Magic Menagariess</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header-bar">
+    <nav class="navbar navbar-expand-lg px-4">
+        <a class="navbar-brand text-warning" href="#">MAGIC MENAGARIES</a>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="products.html" class="nav-link text-warning">PRODUCT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="container mt-5">
+
+    <h2 class="text-center text-light mb-4">Celebration Wands</h2>
+
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <img src="images/mainwand.png" class="img-fluid detail-main-img">
+        </div>
+
+        <div class="col-md-6 text-light">
+            <h3>Embrace Your Inner Wizard</h3>
+            <p>Powerful mystical wands from the Harry Potter world.</p>
+
+            <button class="btn btn-warning px-5 py-2 mt-3" onclick="addToCart('Main Celebration Wand')">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <!-- Wand variations -->
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="small-wand-card">
+                <img src="images/wand1.png" class="img-fluid">
+                <p class="text-light text-center">Lunar Wand</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="small-wand-card">
+                <img src="images/wand2.png" class="img-fluid">
+                <p class="text-light text-center">Gryffindor Wand</p>
+            </div>
+        </div>
+
+        <!-- Repeat for all wand colors -->
+
+    </div>
+
+</section>
+
+<footer class="footer text-center p-4 text-light">© 2025 Magic ManaWares</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
