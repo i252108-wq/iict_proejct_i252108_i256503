@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
             width: 380px;
             padding: 35px 30px;
             border-radius: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         /* Title */
@@ -36,7 +37,7 @@
             font-size: 20px;
             font-weight: 700;
             text-align: center;
-            color: #7f4fd3;
+            color: #2e2e30;
         }
 
         /* Method blocks */
@@ -59,7 +60,7 @@
         .label-text {
             font-size: 15px;
             font-weight: 600;
-            color: #7f4fd3;
+            color: #4b494e;
             margin: 15px 0 6px 2px;
         }
 
@@ -104,7 +105,7 @@
         .footer {
             text-align: center;
             padding: 40px 0;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
         }
 
@@ -123,9 +124,9 @@
 
 <body>
 
-<!-- PAYMENT BOX -->
-<div class="payment-wrapper">
-    <div class="payment-box">
+    <!-- PAYMENT BOX -->
+    <div class="payment-wrapper">
+        <div class="payment-box">
 
         <!-- BACK ARROW + TITLE -->
         <div class="d-flex align-items-center mb-3">
@@ -154,8 +155,6 @@
                 <img src="Gemini_Generated_Image_um01dsum01dsum01.png" width="35">
                 <span class="ms-2">Axis Bank xxxx68</span>
             </div>
-            <input type="radio" name="card">
-        </div>
 
         <!-- Card 2 -->
         <div class="card-item">
@@ -163,39 +162,64 @@
                 <img src="Gemini_Generated_Image_5xglb35xglb35xgl.png" width="35">
                 <span class="ms-2">VYX Bank xxxx54</span>
             </div>
-            <input type="radio" name="card">
+
+            <!-- Debit Cards -->
+            <div class="method-box" onclick="selectDebit()">
+                <span>Debit Cards</span>
+                <span>›</span>
+            </div>
+
+            <!-- Credit Cards -->
+            <div class="label-text">Credit Cards</div>
+
+            <!-- Card 1 -->
+            <div class="card-item">
+                <div>
+                    <img src="mastercard.png" width="35">
+                    <span class="ms-2">Axis Bank xxxx68</span>
+                </div>
+                <input type="radio" name="card">
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card-item">
+                <div>
+                    <img src="mastercard.png" width="35">
+                    <span class="ms-2">VYX Bank xxxx54</span>
+                </div>
+                <input type="radio" name="card">
+            </div>
+
+            <!-- Add New Card -->
+            <div class="add-card-btn" onclick="addCard()">
+                ➕ Add New Card
+            </div>
+
+            <!-- Add New Method -->
+            <div class="add-method-btn mt-3" onclick="addMethod()">
+                ➕ Add new method
+            </div>
+
+            <!-- Pay Now -->
+            <button class="pay-btn" onclick="payNow()">Pay Now</button>
+
         </div>
-
-        <!-- Add New Card -->
-        <div class="add-card-btn" onclick="addCard()">
-            ➕ Add New Card
-        </div>
-
-        <!-- Add New Method -->
-        <div class="add-method-btn mt-3" onclick="addMethod()">
-            ➕ Add new method
-        </div>
-
-        <!-- Pay Now -->
-        <button class="pay-btn" onclick="payNow()">Pay Now</button>
-
     </div>
-</div>
 
-<!-- FOOTER -->
-<footer class="footer">
-    MAGIC MANAGAERIES<br>
-    FAQS · PRIVACY POLICY · RETURNS<br>
-    CONTACT: magicmanagaeries@gmail.com<br>
-    PHONE: 034567898089 · ADDRESS: ISLAMABAD<br>
+    <!-- FOOTER -->
+    <footer class="footer">
+        MAGIC MANAGAERIES<br>
+        FAQS · PRIVACY POLICY · RETURNS<br>
+        CONTACT: magicmanagaeries@gmail.com<br>
+        PHONE: 034567898089 · ADDRESS: ISLAMABAD<br>
 
-    <div class="social-icons mt-2">
-        <img src="fb.png">
-        <img src="twitter.png">
-        <img src="ig.png">
-        <img src="linkedin.png">
-    </div>
-</footer>
+        <div class="social-icons mt-2">
+            <img src="fb.png">
+            <img src="twitter.png">
+            <img src="ig.png">
+            <img src="linkedin.png">
+        </div>
+    </footer>
 
 <!-- JS -->
 <script>
@@ -206,4 +230,5 @@
 </script>
 
 </body>
+
 </html>

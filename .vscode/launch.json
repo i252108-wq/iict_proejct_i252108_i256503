@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+<<<<<<< HEAD
             "type": "msedge",
             "request": "launch",
             "name": "Open productdetailpage.html",
             "file": "c:\\Users\\HP\\Documents\\GitHub\\iict_proejct_i252108_i256503\\productdetailpage.html"
+=======
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+>>>>>>> 8d498b91fa78aa727f35b09aa4cb2683bb93242d
         }
     ]
 }
