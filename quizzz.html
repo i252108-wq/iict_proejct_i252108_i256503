@@ -5,65 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>House Sorting Quiz</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fcf6f6;
-            text-align: center;
+            font-family: "Georgia", serif;
+            background-image: url("bg.jpeg");
+            /* <-- YOUR BACKGROUND IMAGE */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
             padding: 50px;
+            text-align: center;
         }
 
         h1 {
-            color: #2b2929;
+            color: #3b2f1e;
+            text-shadow: 1px 1px 2px #000;
         }
 
+        /* --- PARCHEMENT / SCROLL STYLE CONTAINER --- */
         .quiz-container {
-            background-color: #cfc6c6;
-            padding: 20px 40px;
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url("parchment.jpg");
+            /* <-- USE A PARCHMENT IMAGE HERE */
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 40px 60px;
+            width: 500px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+            border: 2px solid #8b6f47;
         }
 
         button {
             padding: 10px 20px;
             margin-top: 15px;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             border-radius: 5px;
             border: none;
-            background-color: #212221;
-            color: rgb(58, 56, 56);
+            background-color: #3b2f1e;
+            color: #fcebd1;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #5a432a;
         }
 
         #result {
             margin-top: 20px;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 22px;
+            color: #2a1f12;
+        }
+
+        a {
+            color: #3b2f1e;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img.small-icon {
+            width: 40px;
+            margin-left: 10px;
+        }
+
+        img.quiz-img {
+            width: 120px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 
-<body><a image src="bg.jpeg"></a>
+<body>
+
     <div class="quiz-container">
         <h1>Which House Do You Belong To?</h1>
+
         <a href="homepage.html">Back to Home</a>
-        <a image src="home icon.jpeg"></a>
+
         <div id="quiz">
-            <a image src="quiz image.jpeg"></a>
-            <p>1. Do you enjoy adventures and challenges?</p>
+
+            <p><strong>1. Do you enjoy adventures and challenges?</strong></p>
             <input type="radio" name="q1" value="Gryffindor"> Yes<br>
             <input type="radio" name="q1" value="Hufflepuff"> Sometimes<br>
             <input type="radio" name="q1" value="Ravenclaw"> Rarely<br>
             <input type="radio" name="q1" value="Slytherin"> Never<br><br>
 
-            <p>2. Are you ambitious and goal-oriented?</p>
+            <p><strong>2. Are you ambitious and goal-oriented?</strong></p>
             <input type="radio" name="q2" value="Gryffindor"> Sometimes<br>
             <input type="radio" name="q2" value="Slytherin"> Yes<br>
             <input type="radio" name="q2" value="Hufflepuff"> Rarely<br>
             <input type="radio" name="q2" value="Ravenclaw"> Sometimes<br><br>
 
-            <p>3. Do you enjoy learning and solving puzzles?</p>
+            <p><strong>3. Do you enjoy learning and solving puzzles?</strong></p>
             <input type="radio" name="q3" value="Ravenclaw"> Yes<br>
             <input type="radio" name="q3" value="Gryffindor"> Sometimes<br>
             <input type="radio" name="q3" value="Hufflepuff"> Sometimes<br>
@@ -90,15 +131,14 @@
                 }
             }
 
-            // Count occurrences of each house
             const houseCounts = {};
             answers.forEach(house => {
                 houseCounts[house] = (houseCounts[house] || 0) + 1;
             });
 
-            // Find house with max count
             let maxHouse = answers[0];
             let maxCount = 0;
+
             for (const house in houseCounts) {
                 if (houseCounts[house] > maxCount) {
                     maxCount = houseCounts[house];
@@ -106,7 +146,8 @@
                 }
             }
 
-            document.getElementById('result').innerText = `You belong to: ${maxHouse}!`;
+            document.getElementById('result').innerText =
+                `You belong to: ${maxHouse}!`;
         }
     </script>
 
