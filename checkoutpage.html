@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods | Magic Managaeries</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        body {
+            background: url('background.jpg') center/cover no-repeat fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Centered payment box */
+        .payment-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            margin-bottom: 60px;
+        }
+
+        .payment-box {
+            background: #ffffff;
+            width: 380px;
+            padding: 35px 30px;
+            border-radius: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Title */
+        .payment-title {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            color: #7f4fd3;
+        }
+
+        /* Method blocks */
+        .method-box {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .method-box:hover {
+            background: #f7f2ff;
+        }
+
+        /* Section label */
+        .label-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #7f4fd3;
+            margin: 15px 0 6px 2px;
+        }
+
+        /* Cards */
+        .card-item {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            background: #fafafa;
+        }
+
+        .add-card-btn,
+        .add-method-btn {
+            border: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            background: #fafafa;
+            cursor: pointer;
+        }
+
+        .add-card-btn:hover,
+        .add-method-btn:hover {
+            background: #f1eaff;
+        }
+
+        /* Pay Now Button */
+        .pay-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            background: #7f4fd3;
+            color: white;
+            font-weight: bold;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(0,0,0,0.6);
+            color: white;
+        }
+
+        .footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 28px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- PAYMENT BOX -->
+<div class="payment-wrapper">
+    <div class="payment-box">
+
+        <!-- BACK ARROW + TITLE -->
+        <div class="d-flex align-items-center mb-3">
+            <span style="font-size:22px; cursor:pointer;" onclick="goBack()">←</span>
+            <span class="payment-title w-100">Payment Methods</span>
+        </div>
+
+        <!-- UPI -->
+        <div class="method-box" onclick="selectUPI()">
+            <span>UPI</span>
+            <span>›</span>
+        </div>
+
+        <!-- Debit Cards -->
+        <div class="method-box" onclick="selectDebit()">
+            <span>Debit Cards</span>
+            <span>›</span>
+        </div>
+
+        <!-- Credit Cards -->
+        <div class="label-text">Credit Cards</div>
+
+        <!-- Card 1 -->
+        <div class="card-item">
+            <div>
+                <img src="mastercard.png" width="35">
+                <span class="ms-2">Axis Bank xxxx68</span>
+            </div>
+            <input type="radio" name="card">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-item">
+            <div>
+                <img src="mastercard.png" width="35">
+                <span class="ms-2">VYX Bank xxxx54</span>
+            </div>
+            <input type="radio" name="card">
+        </div>
+
+        <!-- Add New Card -->
+        <div class="add-card-btn" onclick="addCard()">
+            ➕ Add New Card
+        </div>
+
+        <!-- Add New Method -->
+        <div class="add-method-btn mt-3" onclick="addMethod()">
+            ➕ Add new method
+        </div>
+
+        <!-- Pay Now -->
+        <button class="pay-btn" onclick="payNow()">Pay Now</button>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    MAGIC MANAGAERIES<br>
+    FAQS · PRIVACY POLICY · RETURNS<br>
+    CONTACT: magicmanagaeries@gmail.com<br>
+    PHONE: 034567898089 · ADDRESS: ISLAMABAD<br>
+
+    <div class="social-icons mt-2">
+        <img src="fb.png">
+        <img src="twitter.png">
+        <img src="ig.png">
+        <img src="linkedin.png">
+    </div>
+</footer>
+
+<!-- JS -->
+<script>
+    function goBack() {
+        alert("Going back.");
+        console.log("Back button clicked");
+    }
+
+    function selectUPI() {
+        alert("UPI Selected");
+        console.log("UPI payment method selected");
+    }
+
+    function selectDebit() {
+        alert("Debit Cards Selected");
+        console.log("Debit card section opened");
+    }
+
+    function addCard() {
+        alert("Add New Card option clicked.");
+        console.log("Add new card form should appear");
+    }
+
+    function addMethod() {
+        alert("Add New Payment Method clicked.");
+        console.log("User wants to add a new method");
+    }
+
+    function payNow() {
+        alert("Processing Payment...");
+        console.log("Payment initiated");
+    }
+</script>
+
+</body>
+</html>
