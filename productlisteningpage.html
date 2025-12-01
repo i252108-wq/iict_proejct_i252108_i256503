@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,7 @@
     <div class="row g-4">
 
         <!-- PRODUCT CARD -->
-        <div class="col-md-3">
+      <!--   <div class="col-md-3">
             <div class="product-card">
                 <img src="images/harrybook.png" class="img-fluid">
                 <h5>Harry Potter Book</h5>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Duplicate this block for all your items -->
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
             <div class="product-card">
                 <img src="images/pin.png" class="img-fluid">
                 <h5>Wizard Pin</h5>
@@ -59,11 +59,278 @@
 
         <!-- Continue for all listed items -->
 
-    </div>
+    <!-- </div>
 </section>
 
 <footer class="footer text-center p-4">© 2025 Magic ManaWares</footer>
 
 <script src="script.js"></script>
+</body>
+</html> 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Magic Managaeries</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            background: url('background.jpg') center/cover no-repeat fixed;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(7, 5, 5);
+        }
+
+        /* NAVIGATION BAR */
+        .navbar-custom {
+            background: rgba(0,0,0,0.7);
+            padding: 15px 25px;
+        }
+        .navbar-custom .nav-link {
+            color: rgb(10, 6, 6) !important;
+            font-weight: 600;
+            margin-left: 20px;
+        }
+        .navbar-custom .nav-link.active {
+            color: #ffcc00 !important;
+        }
+
+        /* PAGE TITLE */
+        .page-title {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            font-size: 45px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        /* PRODUCT CARD */
+        .product-card {
+            background: rgba(255,255,255,0.12);
+            border-radius: 15px;
+            padding: 18px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .product-card img {
+            height: 230px;
+            object-fit: contain;
+            width: 100%;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.20);
+        }
+        .product-title {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-desc {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        .price {
+            color: #ffcc00;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .btn-buy {
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 8px;
+            padding: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background: rgba(0,0,0,0.7);
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand text-warning fw-bold" href="#">MAGIC MANAGARIES</a>
+    <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active">PRODUCT</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CONTACT US</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">WISHLIST</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CART</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">ACCOUNT</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- PAGE TITLE -->
+<h1 class="page-title">PRODUCTS</h1>
+
+<!-- PRODUCT GRID -->
+<div class="container">
+    <div class="row g-4">
+
+        <!-- PRODUCT CARD 1 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_2mzjkb2mzjkb2mzj.png" alt="Product">
+                <div class="product-title">Harry Potter Book</div>
+                <div class="product-desc">The Chamber of Secrets</div>
+                <div class="price">2500 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT CARD 2 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_1fi90s1fi90s1fi9 (1).png" alt="Product">
+                <div class="product-title">Wizard Pin</div>
+                <div class="product-desc">Enamel Pin</div>
+                <div class="price">350 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT CARD 3 -->
+        <div class="col-md-3">
+            
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_k7xrjpk7xrjpk7xr.png" alt="Product">
+                <div class="product-title">Wand Set</div>
+                <div class="product-desc">Collector Edition</div>
+                <div class="price">1200 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT CARD 4 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_ezqv7ezqv7ezqv7e.png" alt="Product">
+                <div class="product-title">Harry Potter Hoodie</div>
+                <div class="product-desc">Warm & Cozy</div>
+                <div class="price">3500 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 5 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_abwj5eabwj5eabwj.png" alt="Product">
+                <div class="product-title">Harry Potter Mug</div>
+                <div class="product-desc">Every sip of magic </div>
+                <div class="price">1200 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 6 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_5uw2t15uw2t15uw2.png" alt="Product">
+                <div class="product-title">Snitch</div>
+                <div class="product-desc">Catch the magic </div>
+                <div class="price">1570 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 7 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_y0j3u9y0j3u9y0j3.png" alt="Product">
+                <div class="product-title">Harry Potter bottle </div>
+                <div class="product-desc">Hydration compassion </div>
+                <div class="price">1200 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 8 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_qtgwn5qtgwn5qtgw.png" alt="Product">
+                <div class="product-title">Harry Potter clock </div>
+                <div class="product-desc">set the time for magic </div>
+                <div class="price">2200 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 9 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_tz8cnutz8cnutz8c.png" alt="Product">
+                <div class="product-title">Harry Potter cloack </div>
+                <div class="product-desc">Wear the wiziddary</div>
+                <div class="price">2700 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 10 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_rxnsgxrxnsgxrxns.png" alt="Product">
+                <div class="product-title">Harry Potter sweat shirt </div>
+                <div class="product-desc">comfort</div>
+                <div class="price">1500 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 11 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_4dfqq94dfqq94dfq.png" alt="Product">
+                <div class="product-title">Harry Potter pen</div>
+                <div class="product-desc">Write the magic</div>
+                <div class="price">700 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- PRODUCT CARD 12 -->
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="Gemini_Generated_Image_ybjh5cybjh5cybjh.png" alt="Product">
+                <div class="product-title">Harry Potter t-shirt</div>
+                <div class="product-desc">cozy </div>
+                <div class="price">800 PKR</div>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Continue adding as many products as you need -->
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 MAGIC MANAGAERIES — ALL RIGHTS RESERVED
+</footer>
+
 </body>
 </html>
