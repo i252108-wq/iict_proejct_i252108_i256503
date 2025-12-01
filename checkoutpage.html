@@ -12,7 +12,7 @@
     <!-- CSS -->
     <style>
         body {
-            background: url('background.jpg') center/cover no-repeat fixed;
+            background: url(bg.jpeg) center/cover no-repeat fixed;
             font-family: Arial, sans-serif;
         }
 
@@ -128,39 +128,16 @@
     <div class="payment-wrapper">
         <div class="payment-box">
 
-        <!-- BACK ARROW + TITLE -->
-        <div class="d-flex align-items-center mb-3">
-            <span style="font-size:22px; cursor:pointer;" onclick="goBack()">←</span>
-            <span class="payment-title w-100">Payment Methods</span>
-        </div>
-
-        <!-- UPI -->
-        <div class="method-box" onclick="selectUPI()">
-            <span>UPI</span>
-            <span>›</span>
-        </div>
-
-        <!-- Debit Cards -->
-        <div class="method-box" onclick="selectDebit()">
-            <span>Debit Cards</span>
-            <span>›</span>
-        </div>
-
-        <!-- Credit Cards -->
-        <div class="label-text">Credit Cards</div>
-
-        <!-- Card 1 -->
-        <div class="card-item">
-            <div>
-                <img src="Gemini_Generated_Image_um01dsum01dsum01.png" width="35">
-                <span class="ms-2">Axis Bank xxxx68</span>
+            <!-- BACK ARROW + TITLE -->
+            <div class="d-flex align-items-center mb-3">
+                <span style="font-size:22px; cursor:pointer;" onclick="goBack()">←</span>
+                <span class="payment-title w-100">Payment Methods</span>
             </div>
 
-        <!-- Card 2 -->
-        <div class="card-item">
-            <div>
-                <img src="Gemini_Generated_Image_5xglb35xglb35xgl.png" width="35">
-                <span class="ms-2">VYX Bank xxxx54</span>
+            <!-- UPI -->
+            <div class="method-box" onclick="selectUPI()">
+                <span>UPI</span>
+                <span>›</span>
             </div>
 
             <!-- Debit Cards -->
@@ -175,59 +152,82 @@
             <!-- Card 1 -->
             <div class="card-item">
                 <div>
-                    <img src="mastercard.png" width="35">
+                    <img src="Gemini_Generated_Image_um01dsum01dsum01.png" width="35">
                     <span class="ms-2">Axis Bank xxxx68</span>
                 </div>
-                <input type="radio" name="card">
-            </div>
 
-            <!-- Card 2 -->
-            <div class="card-item">
-                <div>
-                    <img src="mastercard.png" width="35">
-                    <span class="ms-2">VYX Bank xxxx54</span>
+                <!-- Card 2 -->
+                <div class="card-item">
+                    <div>
+                        <img src="Gemini_Generated_Image_5xglb35xglb35xgl.png" width="35">
+                        <span class="ms-2">VYX Bank xxxx54</span>
+                    </div>
+
+                    <!-- Debit Cards -->
+                    <div class="method-box" onclick="selectDebit()">
+                        <span>Debit Cards</span>
+                        <span>›</span>
+                    </div>
+
+                    <!-- Credit Cards -->
+                    <div class="label-text">Credit Cards</div>
+
+                    <!-- Card 1 -->
+                    <div class="card-item">
+                        <div>
+                            <img src="mastercard.png" width="35">
+                            <span class="ms-2">Axis Bank xxxx68</span>
+                        </div>
+                        <input type="radio" name="card">
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card-item">
+                        <div>
+                            <img src="mastercard.png" width="35">
+                            <span class="ms-2">VYX Bank xxxx54</span>
+                        </div>
+                        <input type="radio" name="card">
+                    </div>
+
+                    <!-- Add New Card -->
+                    <div class="add-card-btn" onclick="addCard()">
+                        ➕ Add New Card
+                    </div>
+
+                    <!-- Add New Method -->
+                    <div class="add-method-btn mt-3" onclick="addMethod()">
+                        ➕ Add new method
+                    </div>
+
+                    <!-- Pay Now -->
+                    <button class="pay-btn" onclick="payNow()">Pay Now</button>
+
                 </div>
-                <input type="radio" name="card">
             </div>
 
-            <!-- Add New Card -->
-            <div class="add-card-btn" onclick="addCard()">
-                ➕ Add New Card
-            </div>
+            <!-- FOOTER -->
+            <footer class="footer">
+                MAGIC MANAGAERIES<br>
+                FAQS · PRIVACY POLICY · RETURNS<br>
+                CONTACT: magicmanagaeries@gmail.com<br>
+                PHONE: 034567898089 · ADDRESS: ISLAMABAD<br>
 
-            <!-- Add New Method -->
-            <div class="add-method-btn mt-3" onclick="addMethod()">
-                ➕ Add new method
-            </div>
+                <div class="social-icons mt-2">
+                    <img src="fb.png">
+                    <img src="twitter.png">
+                    <img src="ig.png">
+                    <img src="linkedin.png">
+                </div>
+            </footer>
 
-            <!-- Pay Now -->
-            <button class="pay-btn" onclick="payNow()">Pay Now</button>
-
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        MAGIC MANAGAERIES<br>
-        FAQS · PRIVACY POLICY · RETURNS<br>
-        CONTACT: magicmanagaeries@gmail.com<br>
-        PHONE: 034567898089 · ADDRESS: ISLAMABAD<br>
-
-        <div class="social-icons mt-2">
-            <img src="fb.png">
-            <img src="twitter.png">
-            <img src="ig.png">
-            <img src="linkedin.png">
-        </div>
-    </footer>
-
-<!-- JS -->
-<script>
-    function payNow() {
-        alert("Processing Payment...");
-        console.log("Payment initiated");
-    }
-</script>
+            <!-- JS -->
+            <script>
+                function payNow() {
+                    alert("Processing Payment...");
+                    console.log("Payment initiated");
+                }
+            </script>
 
 </body>
 
